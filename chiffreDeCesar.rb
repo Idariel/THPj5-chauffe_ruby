@@ -16,15 +16,31 @@
 # =======================================================
 
 
-# def chiffre_de_cesar (texte, nb)
-#
-# end
+def chiffre_de_cesar(texte, i)
+  puts texte
+  newTexte = []
 
-table de hashage (clé: position dans le string, valeur: position dans alphabet)
-texte = "HELLO"
-alphabet = [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z]
-#Chiffre =2
-i = 2
-puts texte[0]
+  for l in 0..texte.length-1
+    #Transforme la lettre en caractère ASCII
+    numASCII = texte[l].ord #chiffre ASCII
+    #Ajoute le décalage
+    newNumASCII = numASCII +i#nouveau chiffre ASCII
+    #Transforme le nouvel ASCII en lettre
 
-puts texte[0] =
+    if newNumASCII < ss
+      newNumASCII = newNumASCII - 26
+    else
+
+    newChar = newNumASCII.chr#nouveau caractère
+    #Crée un tableau avec les nouvelles lettres
+    puts newChar
+    end
+  end
+end
+
+chiffre_de_cesar("Hello",2)
+
+
+a.map { |i| "'" + i.to_s + "'" }.join(",")
+newTexte.map {}.join
+string_arr.map(&:inspect).join
