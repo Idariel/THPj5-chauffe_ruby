@@ -1,19 +1,30 @@
-def chiffre_de_cesar(texte, i)
-  array = texte.chars #splits string into an array of letters
-  puts array
-  newTextArray = []
-  array.each do |l|
+def chiffre_de_cesar(text, i)
+  puts text
+  newText = []
+
+  for l in 0..text.length-1
     #Transforme la lettre en caractère ASCII
-    numASCII = array[l].ord #chiffre ASCII
+    numASCII = text[l].ord #chiffre ASCII
     #Ajoute le décalage
     newNumASCII = numASCII +i#nouveau chiffre ASCII
-    Transforme le nouvel ASCII en caractère
-    newChar = newNumASCII.chr # return the character corresponding to the ASCII
-    newTextArray.push(newChar)
+    #Transforme le nouvel ASCII en lettre
+    newChar = newNumASCII.chr
+    # puts newChar
+    newText.push(newChar)
   end
-  puts newTextArray.join
-  # newText=array.join
-  # puts newText
+  #Remplacer le " "+2 par " "
+  puts "newText = #{newText}"
+  newText = newText.map do |e|
+    if e == "\""
+      ' '
+    else
+      e
+    end
+  end
+  puts "Rep newText = #{newText}"
+  newText.join
+  puts newText
+
 end
 
 chiffre_de_cesar("Hello boy",2)
